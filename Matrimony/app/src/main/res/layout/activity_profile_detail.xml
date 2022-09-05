@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context=".ProfileDetailsScreen.ProfileDetailActivity">
+
+    <data>
+
+        <variable
+            name="ProfileDetail"
+            type="io.systemtest.matrimony.appDatabase.tables.ProfileTables" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+
+            <FrameLayout
+                android:id="@+id/FrameL"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/image_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:iss_auto_cycle="true"
+                    app:iss_delay="0"
+                    app:iss_error_image="@drawable/error"
+                    app:iss_period="1500"
+                    app:iss_selected_dot="@drawable/default_selected_dot"
+                    app:iss_text_align="CENTER"
+                    app:iss_title_background="@drawable/gradient"
+                    app:iss_unselected_dot="@drawable/default_unselected_dot" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="start|top"
+                    android:layout_margin="5dp">
+
+
+                    <ImageView
+                        android:id="@+id/BackImg"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="6dp"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_arrow_back"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/black" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:padding="5dp"
+                        android:text="@{ProfileDetail.profile_id}"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/BackImg"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/CountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/circular_stroke"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="visible"
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="-8dp"
+
+                android:layout_marginEnd="16dp"
+                android:elevation="12dp"
+                app:cardCornerRadius="10dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/FrameL">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp">
+
+                    <TextView
+                        android:id="@+id/ProfileNameTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@{ProfileDetail.profile_name}"
+                        android:textSize="16sp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/ProfileDescriptionTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppins"
+                        android:padding="5dp"
+                        android:text="@{ProfileDetail.profile_detail}"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/ProfileNameTv"
+                        app:layout_constraintTop_toBottomOf="@+id/ProfileNameTv" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                app:layout_constraintTop_toBottomOf="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

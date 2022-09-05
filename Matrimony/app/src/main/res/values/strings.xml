@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Matrimony</string>
+    <string name="pending_profiles">8 Profiles Pending with me</string>
+    <string name="my_matches">My Matches</string>
+    <string name="_5_new">5 NEW</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="name">Name</string>
+    <string name="details">27 yrs, 5 ft 2 in, Tamil, Nair, MBBS, Doctor, Chennai, Tamil Nadu, India.</string>
+    <string name="like">Like her ?</string>
+    <string name="shortlist">Shortlist</string>
+    <string name="premium_nri">Premium NRI</string>
+    <string name="verify">Verified</string>
+    <string name="daily_recommendations">Daily Recommendations</string>
+    <string name="no_profiles_available">No Profiles Available \n Click here to load profile</string>
+    <string name="no_data_available">No Daily Matches Available \n \n Click here to load daily matches</string>
+</resources>

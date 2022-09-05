@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/MyTask/venu/Matrimony/app/src/main/res/layout/activity_main.xml" value="0.12" />
+        <entry key="..\:/SystemTest/Matrimony/app/src/main/res/drawable/bg_yellow.xml" value="0.2135" />
+        <entry key="..\:/SystemTest/Matrimony/app/src/main/res/drawable/circular_stroke.xml" value="0.2135" />
+        <entry key="..\:/SystemTest/Matrimony/app/src/main/res/drawable/gradient_bg.xml" value="0.2295" />
+        <entry key="..\:/SystemTest/Matrimony/app/src/main/res/drawable/ic_baseline_verified_user.xml" value="0.2295" />
+        <entry key="..\:/SystemTest/Matrimony/app/src/main/res/drawable/ic_verified.xml" value="0.2295" />
+        <entry key="..\:/SystemTest/Matrimony/app/src/main/res/font/open_sans_bold.xml" value="0.15677083333333333" />
+        <entry key="..\:/SystemTest/Matrimony/app/src/main/res/font/poppins.xml" value="0.3046875" />
+        <entry key="..\:/SystemTest/Matrimony/app/src/main/res/layout/activity_guesture.xml" value="0.152" />
+        <entry key="..\:/SystemTest/Matrimony/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/SystemTest/Matrimony/app/src/main/res/layout/activity_profile_detail.xml" value="0.264" />
+        <entry key="..\:/SystemTest/Matrimony/app/src/main/res/layout/item_home_adapter.xml" value="0.264" />
+        <entry key="..\:/SystemTest/Matrimony/app/src/main/res/layout/item_swipecard_adapter.xml" value="0.2" />
+        <entry key="..\:/SystemTest/Matrimony/app/src/main/res/layout/just_viewpager2.xml" value="0.27447916666666666" />
+        <entry key="..\:/SystemTest/Matrimony/app/src/main/res/layout/sample_layout.xml" value="0.2" />
+        <entry key="..\:/Users/LapTT013/.gradle/caches/transforms-3/3df8a40a48244a0830ba1fb4effb7f16/transformed/jetified-ImageSlideshow-0.1.0/res/drawable/default_selected_dot.xml" value="0.2135" />
+        <entry key="..\:/Users/LapTT013/.gradle/caches/transforms-3/3df8a40a48244a0830ba1fb4effb7f16/transformed/jetified-ImageSlideshow-0.1.0/res/drawable/default_unselected_dot.xml" value="0.2135" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

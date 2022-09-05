@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+        <variable
+            name="homemodel"
+            type="io.systemtest.matrimony.appDatabase.tables.ProfileTables" />
+
+        <variable
+            name="clickevent"
+            type="io.systemtest.matrimony.homeScreen.adapter.HomeAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_margin="15dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ProfileImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher"
+                    app:layout_constraintBottom_toTopOf="@+id/ProfileNameTv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:profileImage="@{homemodel.profile_images}" />
+
+
+                <TextView
+                    android:id="@+id/ProfileNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@{homemodel.profile_name}"
+
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/ProfileImg" />
+
+                <TextView
+                    android:id="@+id/ProfileDescriptionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="@{homemodel.profile_detail}"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/YesNoCl"
+                    app:layout_constraintTop_toBottomOf="@+id/ProfileNameTv" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/YesNoCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ProfileDescriptionTv">
+
+                    <TextView
+                        android:id="@+id/YesTv"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="6dp"
+                        android:background="@drawable/bg_yellow"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/yes"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/NoTv"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/NoTv"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="6dp"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/no_bg"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/no"
+
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:visibility="visible"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        app:layout_constraintStart_toEndOf="@+id/YesTv"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

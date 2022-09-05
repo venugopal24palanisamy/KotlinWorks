@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="homemodel"
+            type="io.systemtest.matrimony.appDatabase.tables.ProfileTables" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ProfileImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher"
+                    app:layout_constraintBottom_toTopOf="@+id/VerifiedPremiumCl"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:profileImage="@{homemodel.profile_images}" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/VerifiedPremiumCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ProfileImg">
+
+                    <TextView
+                        android:id="@+id/verifiedTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:drawableStart="@drawable/ic_baseline_verified_user"
+                        android:fontFamily="@font/poppins_bold"
+                        android:padding="5dp"
+                        android:text="@string/verify"
+                        android:textColor="@color/verify_blue"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/PremiumTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="6dp"
+                        android:drawableStart="@drawable/premium"
+                        android:drawablePadding="5dp"
+                        android:drawableTint="@color/priemium"
+                        android:fontFamily="@font/poppins_bold"
+                        android:padding="5dp"
+                        android:text="@string/premium_nri"
+                        android:textColor="@color/priemium"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/verifiedTv"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/ProfileNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@{homemodel.profile_name}"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@+id/VerifiedPremiumCl" />
+
+                <TextView
+                    android:id="@+id/ProfileDescriptionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="@{homemodel.profile_detail}"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/BottomLL"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ProfileNameTv" />
+
+
+                <LinearLayout
+                    android:id="@+id/BottomLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ProfileDescriptionTv">
+
+                    <TextView
+                        android:id="@+id/ShortListTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/ic_star_border"
+                        android:fontFamily="@font/poppins_medium"
+                        android:padding="5dp"
+                        android:text="@string/shortlist"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/LikeHerTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/like"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/YesNoCl"
+                        app:layout_constraintStart_toEndOf="@+id/ShortlistCl"
+                        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/YesNoCl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view">
+
+
+                        <ImageView
+                            android:id="@+id/YesTv"
+                            android:layout_width="55dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            android:background="@drawable/no_bg"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_close"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/NoTv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/NoTv"
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="6dp"
+                            android:layout_marginStart="6dp"
+                            android:background="@drawable/bg_yellow"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_tick"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/YesTv"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
